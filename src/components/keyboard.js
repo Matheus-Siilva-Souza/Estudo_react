@@ -5,6 +5,9 @@ import ButtonReset from "./buttonReset"
 import ButtonRes from "./buttonRes"
 import Visor from "./visor"
 import NameCalculator from "./nameCalculator"
+
+
+
 function Keyboard() {
 
     const [result, setRes] = useState(0)

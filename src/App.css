@@ -1,7 +1,7 @@
 .box {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 410px;
   align-items: center;
   border-style: ridge;
   border-width: 5px;
@@ -11,7 +11,7 @@
 .title {
   font-style: italic;
   font-family: serif;
-  font-size: 55px;
+  font-size: 50px;
 }
 
 #telaRes {
@@ -59,8 +59,7 @@
   width: 50%;
 }
 
-/* .css-yfo96e {
-  display: flex;
-  justify-content: center;
-  margin-top: 17%;
-} */
+.link-menu {
+  text-decoration: none;
+  color: #212121;
+}

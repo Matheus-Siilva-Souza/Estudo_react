@@ -1,9 +1,17 @@
 import "../components/menu";
-import PersistentDrawerLeft from "../components/menu"
+import MiniDrawer from "../components/menu"
+import { Outlet } from "react-router-dom";
+
+
 function Layout() {
   return (
-    <PersistentDrawerLeft />
+    <>
+      <MiniDrawer />
+      <Outlet />
+    </>
   );
 }
+
+
 
 export default Layout;
