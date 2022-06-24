@@ -1,6 +1,6 @@
-function ButtonNumber({number, clickNumber}, props) {
+function ButtonNumber({ number, clickNumber }, props) {
     return (
-            <button onClick={() => clickNumber(number)} className="style-buntton number">{number}</button>
+        <button onClick={() => clickNumber(number)} className="style-buntton number">{number}</button>
     )
 }
 

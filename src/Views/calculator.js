@@ -1,8 +1,8 @@
-import  Keyboard  from "../components/keyboard";
+import Keyboard from "../components/keyboard";
 
 function Calculator() {
   return (
-    <Keyboard/>
+    <Keyboard />
   );
 }
 

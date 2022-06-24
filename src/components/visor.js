@@ -1,6 +1,6 @@
-function Visor({number}) {
+function Visor({ number }) {
   return (
-      <input id="telaRes" value={number}/>
+    <input id="telaRes" value={number} />
   )
 }
 

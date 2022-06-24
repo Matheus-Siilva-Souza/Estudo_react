@@ -17,10 +17,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import BrowserRouter from "../router/routes";
+import Router from "../router/routes";
 import LinkCalculator from "../components/linkCalculator";
 import LinkDigitalWatch from "../components/linkDigitalWatch";
-import IconWatch from './iconWatch';
+import CalculateIcon from '@mui/icons-material/Calculate';
+import WatchLaterIcon from '@mui/icons-material/WatchLater';
 
 
 
@@ -119,11 +120,11 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {[<LinkCalculator/>,<LinkDigitalWatch/>].map((text, index) => (
+          {[<LinkCalculator />, <LinkDigitalWatch />].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <IconWatch /> : <IconWatch />}
+                  {index % 2 === 0 ? <CalculateIcon /> : <WatchLaterIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -145,7 +146,7 @@ export default function PersistentDrawerLeft() {
         </List>
       </Drawer>
       <Main open={open}>
-        <BrowserRouter/>
+        <Router />
       </Main>
     </Box>
   );

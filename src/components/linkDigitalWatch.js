@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom"
+
 
 function LinkDigitalWatch() {
     return (
-        <div>
-            Digital Watch
-        </div>
+        // <Link to="/about">Digital Watch</Link>
+        <div>Digital Watch</div>
     );
 }
 

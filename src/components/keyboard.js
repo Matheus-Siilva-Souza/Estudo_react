@@ -91,10 +91,10 @@ function Keyboard() {
 
         for (var i = 0; i <= tempOperators.length; i++) {
             tempOperators.forEach((element, index) => {
-                if (element == "*") {
+                if (element === "*") {
                     operation = parseInt(tempValues[index]) * parseInt(tempValues[index + 1])
                 }
-                if (element == "/") {
+                if (element === "/") {
                     operation = parseInt(tempValues[index]) / parseInt(tempValues[index + 1])
                 }
 
@@ -160,7 +160,7 @@ function Keyboard() {
 
     return (
         <div className="box">
-            <NameCalculator/>
+            <NameCalculator />
             <Visor number={result} />
             <div className="box-number">
                 <ButtonReset number={"C"} clickNumber={reset} />

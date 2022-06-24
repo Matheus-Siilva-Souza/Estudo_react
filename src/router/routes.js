@@ -1,10 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Calculator from "../Views/calculator";
 import DigitalWatch from "../Views/digitalWatch";
-import LinkCalculator from "../components/linkCalculator";
 
-const Rout = () => {
+
+const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
@@ -15,4 +15,4 @@ const Rout = () => {
     )
 }
 
-export default Rout;
+export default Router;

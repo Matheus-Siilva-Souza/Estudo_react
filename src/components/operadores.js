@@ -1,4 +1,4 @@
-function Operadores({number,clickNumber}) {
+function Operadores({ number, clickNumber }) {
 
     return (
         <button onClick={() => clickNumber(number)} className="style-buntton caracter">{number}</button>
