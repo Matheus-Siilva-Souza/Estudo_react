@@ -21,7 +21,6 @@ import CalculateIcon from '@mui/icons-material/Calculate';
 import { Link } from 'react-router-dom';
 
 
-
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -121,6 +120,7 @@ export default function MiniDrawer() {
           <Typography variant="h6" noWrap component="div">
             React App
           </Typography>
+          
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
