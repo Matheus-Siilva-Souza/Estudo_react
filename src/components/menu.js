@@ -17,6 +17,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import { Link } from 'react-router-dom';
 
@@ -149,6 +150,30 @@ export default function MiniDrawer() {
                     }}
                   >
                     <CalculateIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </Link>
+          <Link to="/resgistration" className='link-menu'>
+            {['Registration'].map((text, index) => (
+              <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+                <ListItemButton
+                  sx={{
+                    minHeight: 48,
+                    justifyContent: open ? 'initial' : 'center',
+                    px: 2.5,
+                  }}
+                >
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : 'auto',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    < HowToRegIcon />
                   </ListItemIcon>
                   <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
                 </ListItemButton>

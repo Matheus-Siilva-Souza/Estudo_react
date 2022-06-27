@@ -45,6 +45,7 @@
 #root {
   display: flex;
   justify-content: center;
+  font-family: sans-serif !important;
 
 }
 
@@ -84,4 +85,86 @@
   width: 100%;
   font-size: 130px;
 
+}
+
+
+/*    REGISTRATION CSS     */
+.main_register {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.box-register {
+  width: 50%;
+  max-width: 680px;
+  height: auto;
+  background: #FFFFFF;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.title_register {
+  width: 100%;
+  height: 92px;
+  font-size: 40px;
+  text-align: center;
+  color: #664f4fbd;
+}
+
+#box-iputs-register {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.inpSexo {
+  width: 35%;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#radiosexo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#box-footer-register {
+  margin: 5% 0% 5% 0%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnRegister {
+  width: 200px;
+}
+
+.deletearray {
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.avatarRegister {
+  width: 100%;
+  justify-content: center;
+  flex-direction: column !important;
+  flex-wrap: wrap;
+  border: 1px solid;
+  padding: 24px;
+  margin-bottom: 35px;
+}
+
+.table-user {
+  margin-left: 0px !important;
 }
