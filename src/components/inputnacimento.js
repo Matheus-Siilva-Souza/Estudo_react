@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 
 
 
-function InpTelephone({state}) {
+function InpTelephone({state, value}) {
   return (
     <Box
       sx={{
@@ -18,6 +18,7 @@ function InpTelephone({state}) {
         id="demo-helper-text-aligned-no-helper"
         type="date"
         onChange={state}
+        value={value}
       />
     </Box>
   );

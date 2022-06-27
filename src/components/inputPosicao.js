@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function InpPos({ state, setPos }) {
+export default function InpPos({ setPos }) {
     const [currentPosition, setCurrentPosition] = React.useState(0);
     const positions = [
         {
@@ -73,21 +73,10 @@ export default function InpPos({ state, setPos }) {
                 >
                     {
                         positions.map((position) => (
-                            <MenuItem key={position.id} value={position.id}>{position.position}</MenuItem>
+                            <MenuItem key={position.id.toString()} value={position.id}>{position.position}</MenuItem>
                         ))
                     }
-                    {/* <MenuItem value={1}>Goleiro</MenuItem>
-                    <MenuItem value={2}>Lateral Direito</MenuItem>
-                    <MenuItem value={3}>Lateral esquerdo</MenuItem>
-                    <MenuItem value={4}>Zagueiro central</MenuItem>
-                    <MenuItem value={5}>Quarto zagueiro</MenuItem>
-                    <MenuItem value={6}>Volante</MenuItem>
-                    <MenuItem value={7}>Segundo volante</MenuItem>
-                    <MenuItem value={8}>Meia armador</MenuItem>
-                    <MenuItem value={9}>Ponta esquerda</MenuItem>
-                    <MenuItem value={10}>Ponta direita</MenuItem>
-                    <MenuItem value={11}>Atacante</MenuItem>
-                    <MenuItem value={12}>Centroavante</MenuItem> */}
+
                 </Select>
             </FormControl>
         </Box>

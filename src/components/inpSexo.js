@@ -65,14 +65,14 @@ function BpRadio(props) {
     );
 }
 
-export default function InpSexo({state}) {
+export default function InpSexo({ state, value }) {
     return (
         <FormControl className='inpSexo'>
             <RadioGroup
-                defaultValue="female"
                 aria-labelledby="demo-customized-radios"
                 name="customized-radios"
                 id='radiosexo'
+                value={value}
                 onChange={state}
             >
                 <FormControlLabel value="Homem" control={<BpRadio />} label="Homem" />

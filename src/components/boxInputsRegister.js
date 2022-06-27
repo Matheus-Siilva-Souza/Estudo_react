@@ -1,14 +1,14 @@
 import BirthInput from "./inputnacimento";
 import SimpleInput from "./SimpleInput";
-import InpReasonForConsultation from "./inputDesc"
+import InpDescript from "./inputDesc"
 import InpPos from "./inputPosicao";
 import InpSexo from "./inpSexo";
-import IconButtonsDelete from "./buttonDeletecadastro";
+import IconButtonsRegister from "./buttonDeletecadastro";
 import LetterAvatars from "./avatarRegister";
 import { useState } from "react";
 
 
-function BoxInputsregister() {
+function BoxInputsregister({remove}) {
     const [name, setName] = useState('')
     const [Lastname, setLastname] = useState('')
     const [email, setEmail] = useState('')
@@ -20,6 +20,17 @@ function BoxInputsregister() {
 
     function setPos(position) {
         setPosition(position);
+    }
+
+    function clearInputs() {
+        setName('');
+        setLastname('')
+        setEmail('')
+        setTel('')
+        setBirth('')
+        setPosition('')
+        setDescription('')
+        setSexo('')
     }
 
     return (
@@ -34,15 +45,15 @@ function BoxInputsregister() {
                 desc={description}
                 sex={sexo}
             />
-            <SimpleInput label="Nome" state={(name) => setName(name.target.value)} />
-            <SimpleInput label="Sobre Nome" state={(e) => setLastname(e.target.value)} />
-            <SimpleInput label="Email" state={(e) => setEmail(e.target.value)} />
-            <SimpleInput label="Telefone" state={(e) => setTel(e.target.value)} />
-            <BirthInput state={(e) => setBirth(e.target.value)} />
-            <InpPos setPos={(pos) => setPos(pos)} />
-            <InpReasonForConsultation state={(e) => setDescription(e.target.value)} />
-            <InpSexo state={(e) => setSexo(e.target.value)}/>
-            <IconButtonsDelete />
+            <SimpleInput label="Nome" state={(name) => setName(name.target.value)} value={name} />
+            <SimpleInput label="Sobre Nome" state={(sobrName) => setLastname(sobrName.target.value)} value={Lastname} />
+            <SimpleInput label="Email" state={(email) => setEmail(email.target.value)} value={email} />
+            <SimpleInput label="Telefone" state={(fone) => setTel(fone.target.value)} value={tel} />
+            <BirthInput state={(birthEvente) => setBirth(birthEvente.target.value)} value={birth} />
+            <InpPos setPos={(pos) => setPos(pos)} value={position} />
+            <InpDescript state={(descript) => setDescription(descript.target.value)} value={description} />
+            <InpSexo state={(sexo) => setSexo(sexo.target.value)} value={sexo} />
+            <IconButtonsRegister event={clearInputs}  del={remove} />
         </div>
     )
 };

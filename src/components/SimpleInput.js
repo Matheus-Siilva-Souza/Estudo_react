@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 
 
 
-function SimpleInput({ label, state }) {
+function SimpleInput({ label, state, value }) {
 
     return (
         <Box
@@ -19,6 +19,7 @@ function SimpleInput({ label, state }) {
                 id="demo-helper-text-aligned-no-helper"
                 label={label}
                 onChange={state}
+                value={value}
             />
         </Box>
     );

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-export default function InpReasonForConsultation({state}) {
+export default function InpDescript({ state, value }) {
     return (
         <Box
             component="form"
@@ -10,12 +10,13 @@ export default function InpReasonForConsultation({state}) {
                 '& .MuiTextField-root': { m: 1, width: '25ch' },
             }}
             noValidate
-            autoComplete="off"
+            autoComplete="on"
         >
             <div>
                 <TextField
                     id="outlined-multiline-static"
                     label="Descrição"
+                    value={value}
                     multiline
                     rows={4}
                     onChange={state}

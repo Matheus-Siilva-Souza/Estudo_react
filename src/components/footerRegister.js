@@ -1,11 +1,11 @@
-import CleanButton from "./buttonCleanRegister";
+import IconButtonsRegister from "./buttonRegister";
 
 
 
 function BoxFooterregister() {
     return (
         <div id="box-footer-register">
-            <CleanButton />
+            <IconButtonsRegister />
         </div>
     )
 };
