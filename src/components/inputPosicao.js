@@ -9,6 +9,10 @@ export default function InpPos({ setPos }) {
     const [currentPosition, setCurrentPosition] = React.useState(0);
     const positions = [
         {
+            id: 0,
+            position: ""
+        },
+        {
             id: 1,
             position: "Goleiro"
         },
