@@ -1,15 +1,13 @@
-import Titleregister from "./titleRegister";
 import BoxInputsregister from "./boxInputsRegister";
-import BoxFooterregister from "./footerRegister";
+import IconButtonsRegister from "./buttonRegister"
 
 
 function Boxregister() {
 
     return (
         <div className="box-register">
-            <Titleregister />
+            <IconButtonsRegister />
             <BoxInputsregister />
-            <BoxFooterregister />
         </div>
     )
 };

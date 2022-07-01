@@ -4,9 +4,19 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Grid from '@mui/material/Grid';
+
+
 
 export default function InpPos({ setPos }) {
     const [currentPosition, setCurrentPosition] = React.useState(0);
+    const [open, setOpen] = React.useState(false);
+    const handleClose = () => {
+        setOpen(false);
+    };
+    const handleOpen = () => {
+        setOpen(true);
+    };
     const positions = [
         {
             id: 0,
@@ -61,29 +71,37 @@ export default function InpPos({ setPos }) {
     const handleChange = (event) => {
         setCurrentPosition(event.target.value);
         positions.forEach(element => {
-            if (element.id == event.target.value) setPos(element.position);
+            if (element.id === event.target.value) setPos(element.position);
         });
     };
     return (
-        <Box sx={{ minWidth: 223, margin: 1 }}>
-            <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Posições</InputLabel>
-                <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={currentPosition}
-                    label="Posições"
-                    onChange={handleChange}
-                >
-                    {
-                        positions.map((position) => (
-                            <MenuItem key={position.id.toString()} value={position.id}>{position.position}</MenuItem>
-                        ))
-                    }
+        <Box >
+            <Grid container spacing={0} >
+                <Grid>
+                    <FormControl className='input-style'>
+                        <InputLabel id="demo-controlled-open-select-label" >Posições</InputLabel>
+                        <Select
+                            labelId="demo-controlled-open-select-label"
+                            id="demo-controlled-open-select"
+                            open={open}
+                            onClose={handleClose}
+                            onOpen={handleOpen}
+                            value={currentPosition}
+                            label="Posições"
+                            onChange={handleChange}
+                           
+                        >
+                            {
+                                positions.map((position) => (
+                                    <MenuItem key={position.id.toString()} value={position.id}>{position.position}</MenuItem>
+                                ))
+                            }
 
-                </Select>
-            </FormControl>
-        </Box>
+                        </Select>
+                    </FormControl>
+                </Grid>
+            </Grid>
+        </Box >
     );
 }
 

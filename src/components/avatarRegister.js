@@ -1,17 +1,12 @@
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import { pink } from '@mui/material/colors';
-import PersonIcon from '@mui/icons-material/Person';
 import UserdataRegister from './UserDataRegister';
+import Box from '@mui/material/Box';
 
-export default function LetterAvatars({ name, lastNome, email, tel, birth, pos, desc, sex }) {
+export default function LetterAvatars({ name, lastNome, email, tel, birth, pos, desc, sex ,cap}) {
     return (
         <Stack direction="row" className='avatarRegister' spacing={2}>
-            <Avatar sx={{ bgcolor: pink[500], width: 50, height: 50 }}>
-                <PersonIcon sx={{ width: 30, height: 30 }} />
-            </Avatar>
-            <div className='table-user'>
+            <Box component="span" sx={{ p: 2, border: '1px dashed grey', width: 1 }}>
                 <UserdataRegister data={name} lastName={lastNome} />
                 <UserdataRegister data={email} />
                 <UserdataRegister data={tel} />
@@ -19,7 +14,8 @@ export default function LetterAvatars({ name, lastNome, email, tel, birth, pos, 
                 <UserdataRegister data={pos} />
                 <UserdataRegister data={desc} />
                 <UserdataRegister data={sex} />
-            </div>
+                <UserdataRegister data={cap} />
+            </Box>
         </Stack>
     );
 }
